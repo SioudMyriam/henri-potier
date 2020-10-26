@@ -1,0 +1,30 @@
+<main class="main">
+  <section class="container-fluid col-md-8 col-lg-6 justify-content-center">
+    <div class="row row-eq-height">
+      <div *ngIf="offers.length !== 0" class="col-12 mb-5">
+        <div class="offer-container">
+          <p class="offer__type text-center p-3 mb-0">
+            Meilleure offre
+          </p>
+          <ul class="offer__list">
+            <li *ngFor="let book of savedBooks" class="col-12 px-0 row m-0">
+              <div class="col-10 px-0">
+                {{book?.title}}
+              </div>
+
+              <div class="col-2 text-right">{{book?.price}}€</div>
+            </li>
+          </ul>
+          <div class="offer__pannel p-3 col-12 row m-0">
+            <p class="offer__label col-6 m-0 text-center">Prix initial : <span class="offer__price">
+                {{totalPrice}}€</span></p>
+            <p class="offer__label col-6 m-0 text-center">Prix Final : <span class="offer__price_new">
+                {{bestSeller}}€</span></p>
+          </div>
+        </div>
+      </div>
+      <p *ngIf="offers.length === 0" class="offer__message">Votre panier est vide pour l'instant... Choisissez des
+        livres pour bénéficier de nos offres</p>
+    </div>
+  </section>
+</main>

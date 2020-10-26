@@ -1,0 +1,10 @@
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+@import '../styles/graphic-charter';
+
+$main: 'main';
+
+.#{$main} {
+  min-height: 100vh;
+  background: $yellow;
+  padding: 93px 0 50px;
+}

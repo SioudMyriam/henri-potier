@@ -1,0 +1,24 @@
+<main class="main">
+  <section class="container-fluid col-md-6 justify-content-center mb-5">
+    <input type="text" placeholder="Chercher..." class="product__search w-100" [(ngModel)]="searchTitle">
+  </section>
+  <section class="container-fluid col-md-10 justify-content-center">
+    <div class="row row-eq-height">
+      <div *ngFor="let book of productsList | search: searchTitle" class="col-3 mb-5">
+        <div class="product-container">
+          <img src="{{book?.cover}}" alt="{{book?.title}}" class="w-100">
+          <p class="p-3 mb-0">
+            {{book?.title}}
+          </p>
+          <p class="product__price px-3 text-center">
+            {{book?.price}}€
+          </p>
+          <div class="text-center mb-3">
+            <button class="product__button" (click)="addProductToBasket(book?.isbn, book?.price, book?.title)">
+              Ajouter au panier</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

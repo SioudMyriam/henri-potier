@@ -1,0 +1,34 @@
+@import '../../assets/styles/graphic-charter';
+
+$offer: 'offer';
+
+.#{$offer} {
+  &-container {
+    box-shadow: 1px 1px 4px rgba(138,138,138,.8);
+  }
+  &__type {
+    background: $blue;
+    font-weight: bold;
+  }
+  &__message {
+    font-style: italic;
+  }
+  &__pannel {
+    background: $blue;
+  }
+  &__price {
+    color: black;
+    font-weight: bold;
+    &_new {
+      color: $pink;
+    }
+  }
+  &__label {
+    font-weight: bold;
+    color: $pink-dark;
+  }
+  &__list {
+    margin: 0;
+    background: white;
+  }
+}

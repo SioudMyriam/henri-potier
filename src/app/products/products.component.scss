@@ -1,0 +1,36 @@
+@import '../../assets/styles/graphic-charter';
+$product: 'product';
+
+.#{$product} {
+  &-container {
+    box-shadow: 1px 1px 4px rgba(138,138,138,.8);
+    height: 100%;
+    background: white;
+  }
+  &__price {
+    color: $pink;
+    font-weight: bold;
+  }
+  &__search {
+    padding: 7px 23px;
+    border: solid 1px $yellow-dark;
+    border-radius: 21px;
+    &:focus {
+      outline-color: transparent;
+    }
+  }
+  &__button {
+    background: $pink;
+    border: solid 1px $pink;
+    padding: 7px;
+    border-radius: 7px;
+    &:hover {
+      box-shadow: 1px 1px 4px rgba(138,138,138,.8);
+      font-weight: bold;
+      color: $pink-dark;
+    }
+    &:focus {
+      outline-color: transparent;
+    }
+  }
+}
